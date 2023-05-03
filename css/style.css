@@ -471,7 +471,7 @@ main {
     
     .card__header img {
     width: 100%;
-    display: grid;
+    display: flex;
     border-radius: 10px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -523,7 +523,7 @@ main {
     
     .card__header img {
     width: 100%;
-    display: grid;
+    display: flex;
     border-radius: 10px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -574,7 +574,7 @@ main {
       
 .card__header img {
     width: 100%;
-    display: grid;
+    display: flex;
     border-radius: 10px;
     margin-bottom: 20px;
     object-fit: cover;
