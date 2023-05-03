@@ -460,7 +460,7 @@ main {
   font-family: Roboto;
 }
 
-@media (max-width: 480px){
+@media (min-width: 320px){
   
   
   .categorias__cards {
@@ -471,20 +471,11 @@ main {
   .destacados {
     grid-template-columns: repeat(4, 1fr);
   }
-
+  
   .envios {
     display: flex;
   }
-  .box-contac {
-    color: black;
-   
-    font-size: 20px;
-    font-family: Roboto;
-    display: flex;
-    justify-content: space-between;
-    width: 450px;
-  }
-
+  
   main {
     display: flex;
     flex-direction: column;
@@ -492,7 +483,69 @@ main {
     align-items: center;
   }
   
+  .box-contac {
+    color: black;
+   
+    font-size: 15px;
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
   }
+  
+  .button {
+   
+    padding: 5px;
+    font-size: 10px;
+    font-family: Roboto;
+  } 
+  
+  }
+  
+
+
+@media (min-width: 480px){
+  
+  
+  .categorias__cards {
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+  
+  .destacados {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .envios {
+    display: flex;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-contac {
+    color: black;
+   
+    font-size: 15px;
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+  }
+  
+  .button {
+   
+    padding: 5px;
+    font-size: 10px;
+    font-family: Roboto;
+  } 
+  
+  }
+  
 
   @media (min-width: 768px) {
   
