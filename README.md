@@ -1,3 +1,6 @@
 # proyecto0
 Proyecto CODERHOUSE
-segunda entrega coderhouse
+
+**segunda entrega coderhouse**
+
+**Diego Godoy**
