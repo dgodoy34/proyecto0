@@ -200,7 +200,7 @@ text-align: center;
   margin: 0 auto;
   display: grid;
   padding: 45px;
-  grid-template-columns:  1fr 1fr;
+  grid-template-columns:  1fr;
   gap: 50px;
 }
 
