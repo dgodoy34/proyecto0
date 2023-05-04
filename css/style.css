@@ -183,6 +183,9 @@ font-family: Roboto;
 display: flex;
 flex-direction: column;
 text-align: center;
+padding: 5px;
+font-size: 30px;
+font-family: Roboto;
   
 }
 
@@ -202,6 +205,18 @@ text-align: center;
   padding: 45px;
   grid-template-columns:  1fr;
   gap: 50px;
+}
+
+.categoria__product {
+  text-align: center;
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+.categoria__product p {
+  text-align: center;
+  font-size: 30px;
+  font-family: Roboto;
 }
 
 .card {
@@ -367,38 +382,6 @@ article div small {
   font-size: 20px;
 }
 
-.categorias {
-  text-align: center;
-  padding: 5px;
-  font-size: 30px;
-  font-family: Roboto;
-}
-
-.categorias__title {
-  font-size: 50px;
-}
-
-.categorias__cards {
-  grid-template-columns: 1fr 1fr;
- 
-}
-
-.categoria__product {
-  text-align: center;
-  font-size: 20px;
-  font-family: Roboto;
-}
-
-.categoria__product p {
-  text-align: center;
-  font-size: 30px;
-  font-family: Roboto;
-}
-
-.categorias__card-link {
-  font-size: 20px;
-  
-}
 
 .logo {
     padding: 5px;
