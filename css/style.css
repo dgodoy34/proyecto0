@@ -202,7 +202,7 @@ font-family: Roboto;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  padding: 45px;
+  padding: 5px;
   grid-template-columns:  1fr;
   gap: 50px;
 }
@@ -357,6 +357,11 @@ article div small {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
   background-color: rgb(18, 90, 18);
   color: #ddd;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;   
+
 
 
 }
