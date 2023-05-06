@@ -81,38 +81,6 @@ footer p {
 /* ENCABEZADO*/
 
 
-/*.encabezado {
-  padding: 10px 5px;
-
-}
-
-.header__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  font-family: Arvo;
-  font-size: 50px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__container p {
-  font-size: 50px;
-}
-
-.header__container-navbar {
-  display: none;
-}
-
-.header__container-navbar li {
-  margin: 1px;
-}
-
-.header__container-navbar li a {
-  color: black;
-  font-weight: Arvo;
-}
-*/
 header nav ul {
   text-align: center;
   font-size: 20px;
@@ -181,7 +149,7 @@ font-family: Roboto;
 
 .categorias {
 
-display: flex;
+
 flex-direction: column;
 text-align: center;
 padding: 5px;
@@ -203,7 +171,7 @@ font-family: Roboto;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  padding: 5px;
+  padding: 1px;
   grid-template-columns:  1fr;
   gap: 50px;
 }
