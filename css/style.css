@@ -28,7 +28,7 @@ BODY { background-image: url(../assets/images/fondo-verde.jpg) }
 
 .envios {
 
-  height: 300px;
+  height: 250px;
   padding: 7px;
   display: none;
 }
@@ -386,7 +386,88 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 35vw;
+    width: 100vw;
+  }
+
+  
+ /* .box-contac {
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+   display: flex;
+    justify-content: space-between;
+    width: 450px;
+  }*/
+
+  .box-contac {
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+  }
+  
+  .box-contac input, .box-contac select{
+    width: 200px;
+  }
+  
+  .text-area {
+    width: 60%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+  
+}
+
+.button {
+  
+  padding: 5px;
+  font-size: 10px;
+  font-family: Roboto;
+}
+
+
+@media (min-width: 420px){
+  
+  
+  .categorias__cards {
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+    
+    .card__header img {
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+  
+  .destacados {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .envios {
+    display: flex;
+
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flexbox-contac {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
 
   
@@ -419,7 +500,10 @@ main {
   font-family: Roboto;
 }
 
-@media (min-width: 768px){
+ }
+
+  
+@media (min-width: 768px) {
   
   
   .categorias__cards {
@@ -448,11 +532,20 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   }
+
+   .flexbox-contac {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
+
   
   .box-contac {
     color: black;
-   
+    padding: 5px;
     font-size: 15px;
     font-family: Roboto;
     display: flex;
@@ -460,12 +553,24 @@ main {
     width: 450px;
   }
   
-  .button {
-   
-    padding: 5px;
-    font-size: 10px;
-    font-family: Roboto;
-  } 
-  
+  .box-contac input, .box-contac select{
+    width: 200px;
   }
   
+  .textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+  
+}
+
+.button {
+  
+  padding: 5px;
+  font-size: 10px;
+  font-family: Roboto;
+}
+
+
+ }
