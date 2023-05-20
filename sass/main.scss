@@ -1,0 +1,556 @@
+// reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+// Estilo GRAL
+
+BODY { background-image: url(../assets/images/fondo-verde.jpg) } 
+
+.logo {
+  padding: 5px;
+}
+
+
+// fuentes 
+
+@font-face {
+    font-family: Arvo;
+    src: url(../assets/ttf/Arvo-Regular.ttf) format(truetype);
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/ttf/RobotoSlab-Regular.ttf) format(truetype);
+  font-weight: bold;
+}
+
+// footer
+
+.envios {
+
+  height: 250px;
+  padding: 7px;
+  display: none;
+
+  img {
+  width: 100%;
+  position: absolute;
+  
+}
+}
+
+footer {
+
+  p {
+  text-align: center;
+  font-size: 20px;
+  font-family: Roboto;
+}
+
+}
+
+.redes-sociales {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 3px;
+
+
+&__redes { 
+
+    img {
+ 
+  width: 30px;
+  height: 30px;
+}
+
+}
+
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+
+  a {
+  
+  img {
+  width: 50px;
+}
+
+}
+
+}
+
+
+// index MAIN
+
+
+.menu {
+  text-align: center;
+  padding: 10px;
+  list-style: none;
+  font-family: Roboto;
+
+ div:hover {
+  font-size: 20px;
+  color: darkorange;
+  text-shadow: 4px -1px 2px rgba(238,221,20,0.6);
+}
+}
+
+h2{
+  
+form {
+  text-align: center;
+  font-family: Roboto;
+}
+}
+
+.item {
+text-align: center;
+font-size: 20px;
+font-family: Roboto;
+}
+
+// categorias index html
+
+.categorias {
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+  font-size: 30px;
+  font-family: Roboto;
+  
+  &__title {
+    margin-bottom: 40px;
+    padding: 5px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Roboto;
+  }
+  
+  &__cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    padding: 15px;
+    grid-template-columns:  1fr;
+    gap: 50px;
+  }
+  
+  &__product {
+    text-align: center;
+    font-size: 20px;
+    font-family: Roboto;
+  }
+  
+  &__product {
+    
+    p {
+    text-align: center;
+    font-size: 30px;
+    font-family: Roboto;
+  }
+}
+
+&__card{
+
+&-link {
+  background-color: #22c55e;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 0;
+  font-size: 10px;
+  border-radius: 10px;
+  width: 100%;
+  display: grid;
+  text-align: center;
+}
+}
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+
+&__header {
+  
+img {
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover;
+}
+}
+
+&__title {
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-family: Roboto;
+ 
+}
+}
+// comienzo buscador
+
+.search__box {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
+
+&-button {
+
+    height: 32px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: grey;
+    font-family: roboto;
+    color: aliceblue;   
+}
+}
+    
+// fin buscador
+
+// productos html
+
+.sectionOverflow {
+  width: 400px;
+  height: 100px;
+  font-size: 10px;
+  background-color: azure;
+  overflow: auto;
+  padding: 5px;
+  border: double 1px black;
+  margin: 10px;
+
+ img {
+  width: 100px;
+  padding: 5px;
+}
+}
+
+article {
+  border-radius: 10px;
+  padding: 20px;
+
+div 
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+a {
+  text-decoration: none;
+  background-color: rgb(152, 252, 152);
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+  display: inline-block;
+}
+
+div { 
+  position: relative;
+}
+
+div 
+
+small {
+  position: absolute;
+  background-color: gray;
+  color: azure;
+  font-size: 10;
+  right: 0;
+  border-radius: 0px 10px 0px 10px;
+  text-transform: uppercase;
+  padding: 8px;
+}
+}
+
+/* destacados productos.html index.html novedades.html */
+
+.destacados {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 15px;
+  gap: 10px;
+
+
+&__card-product {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  background-color: rgb(18, 90, 18);
+  color: #ddd;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;   
+}
+
+&__card-title {
+
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+}
+}
+
+
+.ofertas {
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 15px;
+  gap: 10px;
+}
+
+// contacto html
+
+div {
+  
+iframe {
+  align-items: center;
+  padding: 1%;
+  width: 100%;
+}
+} 
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+
+  .flexbox-contac {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .box-contac {
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    
+  & input, & select{
+    width: 200px;
+  }
+  
+  .text-area {
+    width: 60%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+}
+
+.button {
+  
+  padding: 5px;
+  font-size: 10px;
+  font-family: Roboto;
+}
+
+@media (min-width: 420px){
+  
+  
+  .categorias__cards {
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+    
+    .card__header{
+      
+    img {
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+}
+
+  .ofertas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  
+  
+  .destacados {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .envios {
+    display: flex;
+    
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flexbox-contac {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  
+  .box-contac {
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+  
+  & input, & select{
+    width: 200px;
+  }
+}
+  
+  .textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+  
+}
+
+.button {
+  
+  padding: 5px;
+  font-size: 10px;
+  font-family: Roboto;
+}
+
+}
+
+  
+@media (min-width: 768px) {
+  
+  
+  .categorias__cards {
+    grid-template-columns: repeat(2, 1fr);
+   
+  }
+    
+    .card__header{
+      
+    img {
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+}
+
+  .ofertas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 15px;
+    gap: 10px;
+  }
+
+  
+  
+  .destacados {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .envios {
+    display: flex;
+    
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flexbox-contac {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  
+  .box-contac {
+    color: black;
+    padding: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+  
+  & input, & select{
+    width: 200px;
+  }
+}
+  
+  .textarea{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+  
+}
+
+.button {
+  
+  padding: 5px;
+  font-size: 10px;
+  font-family: Roboto;
+}
+
+}
