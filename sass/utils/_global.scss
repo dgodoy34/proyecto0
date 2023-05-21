@@ -1,0 +1,38 @@
+// reset
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+
+// Estilo GRAL
+
+BODY { background-image: url(../assets/images/fondo-verde.jpg) } 
+
+.logo {
+  padding: 5px;
+}
+// fuentes 
+
+@font-face {
+    font-family: Arvo;
+    src: url(../assets/ttf/Arvo-Regular.ttf) format(truetype);
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../assets/ttf/RobotoSlab-Regular.ttf) format(truetype);
+  font-weight: bold;
+}
+.titulo {
+    text-align: center;
+  font-size: 30px;
+  font-family: Roboto;
+}
+
+.footer {
+    text-align: center;
+  font-size: 15px;
+  font-family: Roboto;
+}

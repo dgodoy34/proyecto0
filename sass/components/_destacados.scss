@@ -1,0 +1,31 @@
+// destacados productos.html index.html novedades.html 
+
+.destacados {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 15px;
+    gap: 10px;
+  
+  
+  &__card-product {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    background-color: rgb(18, 90, 18);
+    color: #ddd;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+  }
+  
+  &__card-title {
+  
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: $fuentes;
+  }
+  }
+  

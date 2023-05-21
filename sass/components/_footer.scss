@@ -1,0 +1,51 @@
+// footer
+
+.envios {
+
+    height: 250px;
+    padding: 7px;
+    display: none;
+  
+    img {
+    width: 100%;
+    position: absolute;
+    
+  }
+  }
+  
+   
+  .redes-sociales {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3px;
+  
+  
+  &__redes { 
+  
+      img {
+   
+    width: 30px;
+    height: 30px;
+  }
+  
+  }
+  
+  }
+  
+  .whatsapp {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+  
+    a {
+    
+    img {
+    width: 50px;
+  }
+  
+  }
+  
+  }
