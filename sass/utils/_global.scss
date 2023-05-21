@@ -7,7 +7,8 @@
 
 // Estilo GRAL
 
-BODY { background-image: url(../assets/images/fondo-verde.jpg) } 
+/*BODY { background-image: url(../assets/images/fondo-verde.jpg) } */
+BODY { background-image: linear-gradient(rgb(2, 185, 2), yellow, red) }
 
 .logo {
   padding: 5px;
@@ -35,4 +36,12 @@ BODY { background-image: url(../assets/images/fondo-verde.jpg) }
     text-align: center;
   font-size: 15px;
   font-family: Roboto;
+}
+
+@mixin templategrid($column) {
+      
+    display: grid;
+    grid-template-columns: repeat($column, 1fr);
+    
+
 }

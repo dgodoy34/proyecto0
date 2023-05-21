@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build-sass": "sass ./sass/main.scss ./css/main.css -w --no-source-map"
-    },
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-icons": "^1.10.5",
     "sass": "^1.62.1"
   }
 }

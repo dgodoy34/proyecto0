@@ -131,8 +131,7 @@ small {
 }
 
 .ofertas {
-  display: grid;
-  grid-template-columns: 1fr;
+  @include templategrid(1);
   font-size: 15px;
   gap: 10px;
 }
@@ -140,8 +139,7 @@ small {
 @media (min-width: $MQsmall){
   
   .ofertas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    @include templategrid(4);
     font-size: 15px;
     gap: 10px;
   }
@@ -208,8 +206,7 @@ small {
 @media (min-width: $MQlarge) {
   
   .ofertas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    @include templategrid(4);
     font-size: 15px;
     gap: 10px;
   }

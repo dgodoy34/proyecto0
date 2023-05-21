@@ -41,6 +41,10 @@
   width: 100%;
   display: grid;
   text-align: center;
+  transition: all 0, 5s;
+}
+.categorias__card-link:hover {
+  background-color: green;
 }
 
 .card {
@@ -48,6 +52,10 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  transition: all 0, 5s;
+}
+.card:hover {
+  transform: translateY(-15px);
 }
 .card__header img {
   width: 100%;
@@ -74,7 +82,7 @@
     object-fit: cover;
   }
 }
-@media (min-width: 420px) {
+@media (min-width: 375px) {
   .categorias__cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -171,7 +179,7 @@ main {
 }
 .destacados__card-product {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-  background-color: rgb(18, 90, 18);
+  background-image: radial-gradient(circle at top, yellow, green);
   color: #ddd;
   text-align: center;
   display: flex;
@@ -193,8 +201,9 @@ main {
   box-sizing: border-box;
 }
 
+/*BODY { background-image: url(../assets/images/fondo-verde.jpg) } */
 BODY {
-  background-image: url(../assets/images/fondo-verde.jpg);
+  background-image: linear-gradient(rgb(2, 185, 2), yellow, red);
 }
 
 .logo {
@@ -320,12 +329,12 @@ article div small {
 
 .ofertas {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
   font-size: 15px;
   gap: 10px;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 375px) {
   .ofertas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
