@@ -141,7 +141,7 @@ main {
 
 .envios {
   height: 250px;
-  padding: 7px;
+  padding: 0px 7px;
   display: none;
 }
 .envios img {
