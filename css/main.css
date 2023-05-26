@@ -205,7 +205,7 @@ article div small {
 
 
 
-@media (min-width: 375px) {
+@media (min-width: 310px) {
   .ofertas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
