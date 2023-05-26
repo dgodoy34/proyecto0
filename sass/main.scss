@@ -47,20 +47,20 @@ font-family: $fuentes;
   display: flex;
   position: relative;
   justify-content: center;
-  width: 100%;
-  margin: 20px;
+ // width: 100px;
+ // margin: 10px;
 
 &-button {
 
-    height: 32px;
-    width: 100px;
+    height: 25px;
+    width: 90px;
     border: 2px solid black;
     border-radius: 15px;
     background-color: grey;
     font-family: roboto;
     color: aliceblue;   
 }
-}
+}//
     
 // fin buscador
 
