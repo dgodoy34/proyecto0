@@ -1,4 +1,12 @@
 /*BODY { background-image: url(../assets/images/fondo-verde.jpg) } */
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 BODY {
   background-image: linear-gradient(rgb(2, 185, 2), yellow, red);
 }
