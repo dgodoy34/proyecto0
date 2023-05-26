@@ -433,7 +433,7 @@ main {
 }
 
 
-@media (min-width: 420px){
+@media (max-width: 375px){
   
   
   .categorias__cards {
@@ -515,7 +515,7 @@ main {
 }
 
   
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   
   
   .categorias__cards {

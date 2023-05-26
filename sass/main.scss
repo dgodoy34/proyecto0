@@ -136,7 +136,7 @@ small {
   gap: 10px;
 }
 
-@media (min-width: $MQsmall){
+@media (max-width: $MQsmall){
   
   .ofertas {
     @include templategrid(4);
