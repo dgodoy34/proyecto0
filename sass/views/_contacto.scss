@@ -1,55 +1,56 @@
 // contacto html
 
 div {
-  
-    iframe {
-      align-items: center;
-      padding: 1%;
-      width: 100%;
-    }
-    } 
-    
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-    
-      }
-    
-      .flexbox-contac {
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100vw;
-      }
-    
-      .box-contac {
-        color: black;
-        padding: 5px;
-        font-size: 15px;
-        font-family: $fuentes;
-        display: flex;
-        justify-content: space-between;
-        width: 320px;
-        
-      & input, & select{
-        width: 200px;
-      }
-      
-      .text-area {
-        width: 60%;
-        padding: 5px;
-        border-radius: 10px;
-        margin: 20px;
-      }
-    }
-    
-    .button {
-      
-      padding: 5px;
-      font-size: 10px;
-      font-family: $fuentes;
-    }
+
+  iframe {
+    align-items: center;
+    padding: 1%;
+    width: 100%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.flexbox-contac {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.box-contac {
+  color: black;
+  padding: 5px;
+  font-size: 15px;
+  font-family: $fuentes;
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+
+  & input,
+  & select {
+    width: 200px;
+  }
+
+  .text-area {
+    width: 60%;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+}
+
+.button {
+
+  padding: 5px;
+  font-size: 10px;
+  font-family: $fuentes;
+}
