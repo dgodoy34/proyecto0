@@ -1,24 +1,28 @@
 // reset
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 // Estilo GRAL
 
 /*BODY { background-image: url(../assets/images/fondo-verde.jpg) } */
-BODY { background-image: linear-gradient(rgb(2, 185, 2), yellow, red) }
+BODY {
+  background-image: linear-gradient(rgb(2, 185, 2), yellow, red)
+}
 
 .logo {
   padding: 5px;
 }
+
 // fuentes 
 
 @font-face {
-    font-family: Arvo;
-    src: url(../assets/ttf/Arvo-Regular.ttf) format(truetype);
-    font-weight: bold;
+  font-family: Arvo;
+  src: url(../assets/ttf/Arvo-Regular.ttf) format(truetype);
+  font-weight: bold;
 }
 
 @font-face {
@@ -26,22 +30,23 @@ BODY { background-image: linear-gradient(rgb(2, 185, 2), yellow, red) }
   src: url(../assets/ttf/RobotoSlab-Regular.ttf) format(truetype);
   font-weight: bold;
 }
+
 .titulo {
-    text-align: center;
+  text-align: center;
   font-size: 30px;
   font-family: Roboto;
 }
 
 .footer {
-    text-align: center;
+  text-align: center;
   font-size: 15px;
   font-family: Roboto;
 }
 
 @mixin templategrid($column) {
-      
-    display: grid;
-    grid-template-columns: repeat($column, 1fr);
-    
+
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+
 
 }

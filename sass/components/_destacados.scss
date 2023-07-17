@@ -2,11 +2,11 @@
 
 .destacados {
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    font-size: 15px;
-    gap: 10px;
-     
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 15px;
+  gap: 10px;
+
   &__card-product {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
     background-image: radial-gradient(circle at top, yellow, green);
@@ -14,11 +14,11 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;   
+    justify-content: space-around;
   }
-  
+
   &__card-title {
-  
+
     margin-bottom: 20px;
     padding: 20px;
     text-align: center;
@@ -26,5 +26,4 @@
     font-weight: bold;
     font-family: $fuentes;
   }
-  }
-  
+}

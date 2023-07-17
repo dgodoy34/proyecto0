@@ -5,6 +5,7 @@
   font-size: 30px;
   font-family: Roboto;
 }
+
 .categorias__title {
   margin-bottom: 40px;
   padding: 5px;
@@ -13,6 +14,7 @@
   font-weight: bold;
   font-family: Roboto;
 }
+
 .categorias__cards {
   max-width: 1200px;
   margin: 0 auto;
@@ -21,16 +23,19 @@
   grid-template-columns: 1fr;
   gap: 50px;
 }
+
 .categorias__product {
   text-align: center;
   font-size: 20px;
   font-family: Roboto;
 }
+
 .categorias__product p {
   text-align: center;
   font-size: 30px;
   font-family: Roboto;
 }
+
 .categorias__card-link {
   background-color: #22c55e;
   color: #fff;
@@ -43,6 +48,7 @@
   text-align: center;
   transition: all 0, 5s;
 }
+
 .categorias__card-link:hover {
   background-color: green;
 }
@@ -54,9 +60,11 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
   transition: all 0, 5s;
 }
+
 .card:hover {
   transform: translateY(-15px);
 }
+
 .card__header img {
   width: 100%;
   display: none;
@@ -64,16 +72,18 @@
   margin-bottom: 20px;
   object-fit: cover;
 }
+
 .card__title {
   margin-bottom: 15px;
   font-size: 15px;
   font-family: Roboto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .categorias__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .card__header img {
     width: 100%;
     display: flex;
@@ -82,10 +92,12 @@
     object-fit: cover;
   }
 }
+
 @media (min-width: 375px) {
   .categorias__cards {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .card__header img {
     width: 100%;
     display: flex;
@@ -94,6 +106,7 @@
     object-fit: cover;
   }
 }
+
 div iframe {
   align-items: center;
   padding: 1%;
@@ -123,9 +136,12 @@ main {
   justify-content: space-between;
   width: 320px;
 }
-.box-contac input, .box-contac select {
+
+.box-contac input,
+.box-contac select {
   width: 200px;
 }
+
 .box-contac .text-area {
   width: 60%;
   padding: 5px;
@@ -144,6 +160,7 @@ main {
   padding: 7px;
   display: none;
 }
+
 .envios img {
   width: 100%;
   position: absolute;
@@ -157,6 +174,7 @@ main {
   flex-direction: row;
   gap: 3px;
 }
+
 .redes-sociales__redes img {
   width: 30px;
   height: 30px;
@@ -167,6 +185,7 @@ main {
   bottom: 40px;
   right: 20px;
 }
+
 .whatsapp a img {
   width: 50px;
 }
@@ -177,6 +196,7 @@ main {
   font-size: 15px;
   gap: 10px;
 }
+
 .destacados__card-product {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
   background-image: radial-gradient(circle at top, yellow, green);
@@ -186,6 +206,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
 }
+
 .destacados__card-title {
   margin-bottom: 20px;
   padding: 20px;
@@ -215,11 +236,13 @@ BODY {
   src: url(../assets/ttf/Arvo-Regular.ttf) format(truetype);
   font-weight: bold;
 }
+
 @font-face {
   font-family: Roboto;
   src: url(../assets/ttf/RobotoSlab-Regular.ttf) format(truetype);
   font-weight: bold;
 }
+
 .titulo {
   text-align: center;
   font-size: 30px;
@@ -238,6 +261,7 @@ BODY {
   list-style: none;
   font-family: Roboto;
 }
+
 .menu div:hover {
   font-size: 20px;
   color: darkorange;
@@ -259,17 +283,20 @@ h2 form {
   display: flex;
   position: relative;
   justify-content: center;
-  width: 100%;
-  margin: 20px;
 }
+
 .search__box-button {
-  height: 32px;
-  width: 100px;
+  height: 25px;
+  width: 90px;
   border: 2px solid black;
   border-radius: 15px;
   background-color: grey;
   font-family: roboto;
   color: aliceblue;
+}
+
+.counter {
+  text-align: center;
 }
 
 .sectionOverflow {
@@ -282,6 +309,7 @@ h2 form {
   border: double 1px black;
   margin: 10px;
 }
+
 .sectionOverflow img {
   width: 100px;
   padding: 5px;
@@ -291,18 +319,22 @@ article {
   border-radius: 10px;
   padding: 20px;
 }
+
 article div img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
 }
+
 article h3 {
   font-size: 20px;
   margin-bottom: 20px;
 }
+
 article p {
   margin-bottom: 20px;
 }
+
 article a {
   text-decoration: none;
   background-color: rgb(152, 252, 152);
@@ -313,9 +345,11 @@ article a {
   color: black;
   display: inline-block;
 }
+
 article div {
   position: relative;
 }
+
 article div small {
   position: absolute;
   background-color: gray;
@@ -334,31 +368,36 @@ article div small {
   gap: 10px;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
   .ofertas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     font-size: 15px;
     gap: 10px;
   }
+
   .destacados {
     grid-template-columns: repeat(4, 1fr);
   }
+
   .envios {
     display: flex;
   }
+
   main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .flexbox-contac {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
   }
+
   .box-contac {
     color: black;
     padding: 5px;
@@ -368,46 +407,56 @@ article div small {
     justify-content: space-between;
     width: 450px;
   }
-  .box-contac input, .box-contac select {
+
+  .box-contac input,
+  .box-contac select {
     width: 200px;
   }
+
   .textarea {
     width: 100%;
     padding: 5px;
     border-radius: 10px;
     margin: 20px;
   }
+
   .button {
     padding: 5px;
     font-size: 10px;
     font-family: Roboto;
   }
 }
-@media (min-width: 768px) {
+
+@media (min-width: 1200px) {
   .ofertas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     font-size: 15px;
     gap: 10px;
   }
+
   .destacados {
     grid-template-columns: repeat(4, 1fr);
   }
+
   .envios {
     display: flex;
   }
+
   main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .flexbox-contac {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
   }
+
   .box-contac {
     color: black;
     padding: 5px;
@@ -417,15 +466,19 @@ article div small {
     justify-content: space-between;
     width: 450px;
   }
-  .box-contac input, .box-contac select {
+
+  .box-contac input,
+  .box-contac select {
     width: 200px;
   }
+
   .textarea {
     width: 100%;
     padding: 5px;
     border-radius: 10px;
     margin: 20px;
   }
+
   .button {
     padding: 5px;
     font-size: 10px;
