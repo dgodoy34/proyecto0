@@ -1,6 +1,7 @@
 function validateForm() {
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
+    let telefono = document.getElementById("telefono").value;
     let password = document.getElementById("password").value;
 
     // Validar que el campo de nombre no esté vacío
@@ -14,6 +15,13 @@ function validateForm() {
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.match(emailPattern)) {
       alert("Por favor, ingresa un correo electrónico válido.");
+      event.preventDefault();
+      return false;
+    }
+
+    // Validar que el campo de nombre no esté vacío
+    if (telefono.trim() === "") {
+      alert("Por favor, ingresa tu telefono.");
       event.preventDefault();
       return false;
     }
