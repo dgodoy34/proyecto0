@@ -6,7 +6,8 @@ function validateForm() {
 
     // Validar que el campo de nombre no esté vacío
     if (name.trim() === "") {
-      alert("Por favor, ingresa tu nombre.");
+      alert("Por favor, ingresa tu nombre");
+      //console.log("Por favor, ingresa tu nombre.")
       ev.preventDefault();
       return false;
     }
@@ -14,27 +15,31 @@ function validateForm() {
     // Validar que el campo de correo electrónico sea válido
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.match(emailPattern)) {
-      alert("Por favor, ingresa un correo electrónico válido.");
+      alert("Por favor, ingresa un correo electrónico válido");
+      //console.log("Por favor, ingresa un correo electrónico válido.")
       ev.preventDefault();
       return false;
     }
 
     // Validar que el campo de nombre no esté vacío
     if (telefono.trim() === "") {
-      alert("Por favor, ingresa tu telefono.");
+      alert("Por favor, ingresa tu telefono");
+      //console.log("Por favor, ingresa tu telefono.")
       ev.preventDefault();
       return false;
     }
 
     // Validar que la contraseña tenga al menos 6 caracteres
     if (password.length < 8) {
-      alert("La contraseña debe tener al menos 6 caracteres.");
+      alert("La contraseña debe tener al menos 8 caracteres");
+      //console.log("La contraseña debe tener al menos 8 caracteres.")
       ev.preventDefault();
       return false;
     }
 
     // Si todo está correcto, el formulario se envía
-    alert("Formulario válido. Enviando registro...");
+    alert("Formulario correcto gracias por registrarse...");
+    console.log("Formulario correcto gracias por registrarse...")
     return true;
   }
 
@@ -51,4 +56,5 @@ function validateForm() {
 
     document.getElementById("password").value = contrasena;
     alert("Contraseña aleatoria generada: " + contrasena);
+    console.log("Contraseña aleatoria generada: " + contrasena)
   }
