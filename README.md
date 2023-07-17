@@ -7,4 +7,6 @@ Proyecto CODERHOUSE
    
 **PAGINA REGISTRO EN JAVASCRIP**
 
+https://dgodoy34.github.io/proyecto0/pages/Registro.html
+
 **Diego Godoy**
