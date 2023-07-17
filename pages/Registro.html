@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../style/bootstrap.min.css" />
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
+
+  <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+
+        <img src="../assets/images/LOGO.png" alt="Logo" width="150" height="100" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./novedades.html">NOVEDADES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">CONTACTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html"><img src="../assets/images/carrit-png.png" alt="" width="30px"
+                  height="30px"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../assets/images/1.jpg" class="d-block w-100" alt="imagen1" height="350">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/images/2.jpg" class="d-block w-100" alt="imagen2" height="350">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/images/3.jpg" class="d-block w-100" alt="imagen3" height="350">
+        </div>
+        <div class="carousel-item">
+          <img src="../assets/images/4.jpg" class="d-block w-100" alt="imagen4" height="350">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+    <div class="search__box">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+        <button class="search__box-button" type="submit">Buscar</button>
+      </form>
+    </div>
+
+    <div class="titulo">
+      <span>REGISTRARSE</span>
+    </div>
+  </header>
+  <main>
+    <h2>Formulario de Registro</h2>
+    <form id="registration-form" onsubmit="return validateForm()">
+      <div class="flexbox-contac" action="">
+        <div class="box-contac">
+          <label for="name">Nombre y Apellido:</label>
+          <input type="text" id="name" required>
+          <br>
+        </div>
+        <div class="box-contac">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" required>
+          <br>
+        </div>
+        <div class="box-contac">
+
+          <label for="tel">ingrese su telefono </label>
+          <input type="telefono" placeholder="telefono" id="tel" />
+        </div>
+        <div>
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" required>
+          <button type="button" onclick="generarContrasenaAleatoria()">Generar Contraseña</button>
+          <br>
+        </div>
+        <!--input type="submit" value="Registrarse"-->
+        <!--div class="flexbox-contac"  action=""-->
+
+
+
+        <div class="box-contac">
+          <label for="">seleccione su pais</label>
+          <select name="" id="">
+            <option value="">argentina</option>
+            <option value="">chile</option>
+            <option value="">uruguay</option>
+          </select>
+        </div>
+        <div class="box-contac">
+          <!--label for="">administrador</label>
+          <input type="radio" name="admin" /-->
+          <label for="">usuario</label>
+          <input type="radio" name="admin" />
+        </div>
+        <div class="box-contac">
+          <input type="checkbox" id="check" />
+          <label for="check">Acepto terminos y condiciones</label>
+        </div>
+        <div class="button">
+          <!--button>enviar formulario</button-->
+          <button type="reset">limpiar formulario</button>
+        </div>
+
+        <input type="submit" value="Registrarse">
+        <textarea name="comentario" rows="5" cols="85" class="text-area">Escribe aquí tu comentario: </textarea>
+      </div>
+    </form>
+
+  </main>
+
+  <div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.076543328558!2d-58.55803118491452!3d-34.87942417964479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd9906b89630d%3A0x5ffc96d6ce48ff84!2sBarrio%20Parque%20La%20Esperanza!5e0!3m2!1ses!2sar!4v1680046236862!5m2!1ses!2sar"
+      width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <footer>
+
+    <div class="envios">
+      <aside>
+        <img src="../assets/images/envios.png" alt="envios" />
+      </aside>
+    </div>
+    <div class="redes-sociales">
+      <div class="redes-sociales__redes">
+        <a href="https://www.instagram.com/eltallogrowshop/"><img src="../assets/images/instagram-png.png" alt=""
+            height="" width=""></a>
+      </div>
+      <div class="redes-sociales__redes">
+        <a href="https://www.facebook.com/Eltallogrowshop"><img src="../assets/images/face.png" alt="" height=""
+            width=""></a>
+      </div>
+      <div class="redes-sociales__redes">
+        <a href="https://twitter.com/eltallogrowshop"><img src="../assets/images/twitter1.png" alt="" height=""
+            width=""></a>
+      </div>
+      <div class="redes-sociales__redes">
+        <a href="https://www.youtube.com/@eltallogrowshop/about"><img src="../assets/images/youtube.png" alt=""
+            height="" width=""></a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <small> &copy; Todos los derechos reservados </small>
+    </div>
+  </footer>
+
+  <div class="whatsapp">
+    <a href="https://wa.me/c/5491120226907">
+      <img src="../assets/images/whatsapp.png" alt="wpp" />
+    </a>
+
+  </div>
+
+</body>
+
+</html>
