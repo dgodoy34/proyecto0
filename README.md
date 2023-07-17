@@ -2,6 +2,7 @@
 
 Proyecto CODERHOUSE
 
-**PROYECTO FINAL**
+**PROYECTO JAVASCRIP
+   2DA ENTREGA**
 
 **Diego Godoy**
