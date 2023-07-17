@@ -7,7 +7,7 @@ function validateForm() {
     // Validar que el campo de nombre no esté vacío
     if (name.trim() === "") {
       alert("Por favor, ingresa tu nombre.");
-      event.preventDefault();
+      ev.preventDefault();
       return false;
     }
 
@@ -15,21 +15,21 @@ function validateForm() {
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.match(emailPattern)) {
       alert("Por favor, ingresa un correo electrónico válido.");
-      event.preventDefault();
+      ev.preventDefault();
       return false;
     }
 
     // Validar que el campo de nombre no esté vacío
     if (telefono.trim() === "") {
       alert("Por favor, ingresa tu telefono.");
-      event.preventDefault();
+      ev.preventDefault();
       return false;
     }
 
     // Validar que la contraseña tenga al menos 6 caracteres
     if (password.length < 8) {
       alert("La contraseña debe tener al menos 6 caracteres.");
-      event.preventDefault();
+      ev.preventDefault();
       return false;
     }
 
