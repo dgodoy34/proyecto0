@@ -40,7 +40,7 @@
               <a class="nav-link" href="./contacto.html">CONTACTO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contacto.html">login</a>
+              <a class="nav-link" href="./login.html">login</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./Registro.html">Registrarse</a>
@@ -84,10 +84,12 @@
 
 
     <div class="search__box">
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+     
+      <form class="d-flex" role="search" onsubmit="return realizarBusqueda()">
+        <input class="form-control me-2" type="search" id="search-input" placeholder="Buscar..." aria-label="Search">
         <button class="search__box-button" type="submit">Buscar</button>
       </form>
+    
     </div>
 
     <div class="titulo">
