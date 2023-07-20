@@ -2,11 +2,11 @@
 
 // Array con los elementos a buscar
 const elementos = [
-  { names: "Macetas", precioUnitario: 10 },
-  { names: "Fertilizantes", precioUnitario: 5 },
+  { names: "Macetas", precioUnitario: 500 },
+  { names: "Fertilizantes", precioUnitario: 250 },
   { names: "Plantas", precioUnitario: 20 },
-  { names: "Sustrato", precioUnitario: 8 },
-  { names: "Parafernalia", precioUnitario: 15 }
+  { names: "Sustrato", precioUnitario: 120 },
+  { names: "Parafernalia", precioUnitario: 150 }
 ];
 
 document.getElementById("show").addEventListener("click", function () {
