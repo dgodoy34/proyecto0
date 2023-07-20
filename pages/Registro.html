@@ -103,8 +103,10 @@
   </header>
   <main>
     <h2>Formulario de Registro</h2>
+    
+
     <form id="registration-form" onsubmit="return validateForm()">
-      <div class="flexbox-contac" action="">
+      <div class="flexbox-contac">
         <div class="box-contac">
           <label for="name">Nombre y Apellido:</label>
           <input type="text" placeholder="Nombre y Apellido" id="name" required/>
@@ -112,51 +114,38 @@
         </div>
         <div class="box-contac">
           <label for="email">Correo electrónico:</label>
-          <input type="email" placeholder="ingrese su mail" id="email" required/>
+          <input type="email" placeholder="Ingrese su correo electrónico" id="email" required/>
           <br>
         </div>
         <div class="box-contac">
-
-          <label for="tel">ingrese su telefono </label>
-          <input type="telefono" placeholder="telefono" id="tel" required/>
+          <label for="telefono">Ingrese su teléfono:</label>
+          <input type="text" placeholder="Teléfono" id="telefono" required/>
           <br>
         </div>
         <div class="box-contac">
-          <label for="password"></label>
+          <label for="password">Contraseña:</label>
           <input type="password" id="password" required>
           <button type="button" onclick="generarContrasenaAleatoria()">Generar Contraseña</button>
           <br>
         </div>
-        <!--input type="submit" value="Registrarse"-->
-        <!--div class="flexbox-contac"  action=""-->
-
-
-
         <div class="box-contac">
-          <label for="">seleccione su pais</label>
-          <select name="" id="">
-            <option value="">argentina</option>
-            <option value="">chile</option>
-            <option value="">uruguay</option>
+          <label for="pais">Seleccione su país:</label>
+          <select name="" id="pais">
+            <option value="argentina">Argentina</option>
+            <option value="chile">Chile</option>
+            <option value="uruguay">Uruguay</option>
           </select>
         </div>
-        <!--div class="box-contac"-->
-          <!--label for="">administrador</label>
-          <input type="radio" name="admin" /-->
-          <!--label for="">usuario</label>
-          <input type="radio" name="admin" />
-        </div-->
         <div class="box-contac">
           <input type="checkbox" id="check" required/>
-          <label for="check">Acepto terminos y condiciones</label>
+          <label for="check">Acepto términos y condiciones</label>
         </div>
         <div class="button">
-          <!--button>enviar formulario</button-->
-          <button type="reset">limpiar formulario</button>
+          <button type="reset">Limpiar formulario</button>
+          </div>
+          <div>
+          <input type="submit" value="Registrarse">
         </div>
-
-        <input type="submit" value="Registrarse">
-        <!--textarea name="comentario" rows="5" cols="85" class="text-area">Escribe aquí tu comentario: </textarea-->
       </div>
     </form>
 

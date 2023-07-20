@@ -70,9 +70,11 @@ function validateForm() {
     if (validateForm()) {
       alert("Formulario correcto gracias por registrarse...");
       console.log("Formulario correcto gracias por registrarse...");
+      
     }
-
     return validateForm;
+
+    
     /* Si todo está correcto, el formulario se envía
     alert("Formulario correcto gracias por registrarse...");
     console.log("Formulario correcto gracias por registrarse...")
