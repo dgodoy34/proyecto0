@@ -105,7 +105,7 @@
     <h2>Formulario de Registro</h2>
     
 
-    <form id="registration-form" onsubmit="return validateForm()">
+    <form id="registration-form" onsubmit="return validateForm(event)">
       <div class="flexbox-contac">
         <div class="box-contac">
           <label for="name">Nombre y Apellido:</label>
@@ -124,7 +124,7 @@
         </div>
         <div class="box-contac">
           <label for="password">Contraseña:</label>
-          <input type="password" id="password" required>
+          <input type="text" id="password" required>
           <button type="button" onclick="generarContrasenaAleatoria()">Generar Contraseña</button>
           <br>
         </div>
@@ -144,7 +144,7 @@
           <button type="reset">Limpiar formulario</button>
           </div>
           <div>
-          <input type="submit" value="Registrarse">
+          <button type="submit" value="Registrarse">REGISTRARSE</button>
         </div>
       </div>
     </form>
