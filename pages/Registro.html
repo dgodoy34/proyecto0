@@ -8,8 +8,9 @@
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../style/bootstrap.min.css" />
   <link rel="stylesheet" href="../style/style.css">
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/main.js"></script>
+  <!--script src="../js/bootstrap.min.js"></script-->
+  <!--script src="../js/main.js"></script-->
+  
 
   <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon" />
 </head>
@@ -84,11 +85,15 @@
 
 
     <div class="search__box">
-     
-      <form class="d-flex" role="search" onsubmit="return realizarBusqueda()">
-        <input class="form-control me-2" type="search" id="search-input" placeholder="Buscar..." aria-label="Search">
+
+      <label for="product"></label>
+      <input type="text" id="product" placeholder="Buscar...">
+      <button id="show">Buscar</button>
+
+      <!--form class="d-flex" role="search" onsubmit="return realizarBusqueda()">
+        <input class="form-control me-2" type="search" id="product" placeholder="Buscar..." aria-label="Search">
         <button class="search__box-button" type="submit">Buscar</button>
-      </form>
+      </form-->
     
     </div>
 
@@ -201,7 +206,8 @@
     </a>
 
   </div>
-
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
