@@ -38,6 +38,14 @@ function validateForm(event) {
   let usuario = document.getElementById("usuario").value;
   let validateForm = true;
 
+  // Validar que el campo de usuario no esté vacío
+   if (usuario.trim() === "") {
+    alert("Por favor, ingresa tu usuario");
+    //console.log("Por favor, ingresa tu usuario." +  usuario)
+    event.preventDefault();
+    validateForm = false;
+  }
+
    // Validar que el campo de nombre no esté vacío
   if (name.trim() === "") {
     alert("Por favor, ingresa tu nombre");
@@ -46,15 +54,7 @@ function validateForm(event) {
     validateForm = false;
   }
 
-   // Validar que el campo de usuario no esté vacío
-   if (usuario.trim() === "") {
-    alert("Por favor, ingresa tu usuario");
-    //console.log("Por favor, ingresa tu usuario." +  usuario)
-    event.preventDefault();
-    validateForm = false;
-  }
-
-  // Validar que el campo de correo electrónico sea válido
+ // Validar que el campo de correo electrónico sea válido
   let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email.match(emailPattern)) {
     alert("Por favor, ingresa un correo electrónico válido");
