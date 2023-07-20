@@ -48,7 +48,7 @@ function validateForm(event) {
 
    // Validar que el campo de nombre no esté vacío
   if (name.trim() === "") {
-    alert("Por favor, ingresa tu nombre");
+    alert("Por favor, ingresa tu nombre y apellido");
     //console.log("Por favor, ingresa tu nombre." + name)
     event.preventDefault();
     validateForm = false;
