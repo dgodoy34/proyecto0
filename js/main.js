@@ -35,12 +35,21 @@ function validateForm(event) {
   let email = document.getElementById("email").value;
   let telefono = document.getElementById("telefono").value;
   let password = document.getElementById("password").value;
+  let usuario = document.getElementById("usuario").value;
   let validateForm = true;
 
    // Validar que el campo de nombre no esté vacío
   if (name.trim() === "") {
     alert("Por favor, ingresa tu nombre");
-    //console.log("Por favor, ingresa tu nombre.")
+    //console.log("Por favor, ingresa tu nombre." + name)
+    event.preventDefault();
+    validateForm = false;
+  }
+
+   // Validar que el campo de usuario no esté vacío
+   if (usuario.trim() === "") {
+    alert("Por favor, ingresa tu usuario");
+    //console.log("Por favor, ingresa tu usuario." +  usuario)
     event.preventDefault();
     validateForm = false;
   }
@@ -49,7 +58,7 @@ function validateForm(event) {
   let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email.match(emailPattern)) {
     alert("Por favor, ingresa un correo electrónico válido");
-    //console.log("Por favor, ingresa un correo electrónico válido.")
+    //console.log("Por favor, ingresa un correo electrónico válido." + mail)
     event.preventDefault();
     validateForm = false;
   }
@@ -57,7 +66,7 @@ function validateForm(event) {
   // Validar que el campo de telefono no esté vacío
   if (telefono.trim() === "") {
     alert("Por favor, ingresa tu telefono");
-    //console.log("Por favor, ingresa tu telefono.")
+    //console.log("Por favor, ingresa tu telefono." + telefono)
     event.preventDefault();
     validateForm = false;
   }
