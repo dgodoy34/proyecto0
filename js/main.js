@@ -20,13 +20,16 @@ document.getElementById("show").addEventListener("click", function () {
     alert("Producto no encontrado.");
     console.log("Producto no encontrado en la lista.");
   }
+  // Limpiar el campo de entrada después de la búsqueda
+  document.getElementById("product").value = "";
+  
  
 });
 
 //fin buscador
 
 //inicio de registro.html
-
+const formulario = document.getElementById("registration-form")
 function validateForm(event) {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
@@ -34,7 +37,7 @@ function validateForm(event) {
   let password = document.getElementById("password").value;
   let validateForm = true;
 
-  // Validar que el campo de nombre no esté vacío
+   // Validar que el campo de nombre no esté vacío
   if (name.trim() === "") {
     alert("Por favor, ingresa tu nombre");
     //console.log("Por favor, ingresa tu nombre.")
@@ -67,19 +70,18 @@ function validateForm(event) {
     validateForm = false;
   }
 
+  
   // Si todo está correcto, el formulario se envía
-  if (validateForm()) {
+  if (validateForm) {
     alert("Formulario correcto gracias por registrarse...");
     console.log("Formulario correcto gracias por registrarse...");
+    formulario.reset()
     event.preventDefault();
+  } else {
+    event.preventDefault()
   }
   return validateForm;
 
-
-  /* Si todo está correcto, el formulario se envía
-  alert("Formulario correcto gracias por registrarse...");
-  console.log("Formulario correcto gracias por registrarse...")
-  return true;*/
 }
 
 // Función para generar contraseñas aleatorias
@@ -98,8 +100,6 @@ function generarContrasenaAleatoria() {
   console.log("Contraseña aleatoria generada: " + contrasena)
 
 }
-
-
 
 //login.html
 

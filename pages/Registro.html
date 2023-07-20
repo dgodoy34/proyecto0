@@ -107,24 +107,28 @@
 
     <form id="registration-form" onsubmit="return validateForm(event)">
       <div class="flexbox-contac">
+        <!--div class="box-contac">
+          <label for="usuario">usuario:</label>
+          <input type="text" placeholder="usuario" id="usuario" required/>
+          <br-->
         <div class="box-contac">
           <label for="name">Nombre y Apellido:</label>
-          <input type="text" placeholder="Nombre y Apellido" id="name" required/>
+          <input type="text" placeholder="Nombre y Apellido" id="name" />
           <br>
         </div>
         <div class="box-contac">
           <label for="email">Correo electrónico:</label>
-          <input type="email" placeholder="Ingrese su correo electrónico" id="email" required/>
+          <input type="email" placeholder="Ingrese su correo electrónico" id="email" />
           <br>
         </div>
         <div class="box-contac">
           <label for="telefono">Ingrese su teléfono:</label>
-          <input type="text" placeholder="Teléfono" id="telefono" required/>
+          <input type="text" placeholder="Teléfono" id="telefono" />
           <br>
         </div>
         <div class="box-contac">
           <label for="password">Contraseña:</label>
-          <input type="text" id="password" required>
+          <input type="text" id="password" >
           <button type="button" onclick="generarContrasenaAleatoria()">Generar Contraseña</button>
           <br>
         </div>
