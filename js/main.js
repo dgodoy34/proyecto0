@@ -28,99 +28,103 @@ document.getElementById("show").addEventListener("click", function () {
 
 //fin buscador
 
-//inicio de registro.html
-const formulario = document.getElementById("registration-form")
-function validateForm(event) {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let telefono = document.getElementById("telefono").value;
-  let password = document.getElementById("password").value;
-  let usuario = document.getElementById("usuario").value;
-  let validateForm = true;
+   // Función para generar contraseñas aleatorias
+   function generarContrasenaAleatoria() {
+    const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const longitudContrasena = 8;
+    let contrasena = "";
 
-   // Validar que el campo de nombre no esté vacío
-  if (name.trim() === "") {
-    alert("Por favor, ingresa tu nombre");
-    //console.log("Por favor, ingresa tu nombre." + name)
-    event.preventDefault();
-    validateForm = false;
+    for (let i = 0; i < longitudContrasena; i++) {
+      const indice = Math.floor(Math.random() * caracteres.length);
+      contrasena += caracteres.charAt(indice);
+    }
+
+    document.getElementById("password").value = contrasena;
   }
 
-   // Validar que el campo de usuario no esté vacío
-   if (usuario.trim() === "") {
-    alert("Por favor, ingresa tu usuario");
-    //console.log("Por favor, ingresa tu usuario." +  usuario)
-    event.preventDefault();
-    validateForm = false;
+  // Función para guardar la contraseña en Local Storage utilizando JSON
+  function guardarContrasenaLocalStorage(contrasena) {
+    const contrasenasGuardadas = obtenerContrasenasLocalStorage();
+    contrasenasGuardadas.push(contrasena);
+    localStorage.setItem("contrasenas", JSON.stringify(contrasenasGuardadas));
   }
 
-  // Validar que el campo de correo electrónico sea válido
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email.match(emailPattern)) {
-    alert("Por favor, ingresa un correo electrónico válido");
-    //console.log("Por favor, ingresa un correo electrónico válido." + mail)
-    event.preventDefault();
-    validateForm = false;
+  // Función para obtener las contraseñas guardadas en Local Storage
+  function obtenerContrasenasLocalStorage() {
+    const contrasenasJSON = localStorage.getItem("contrasenas");
+    return contrasenasJSON ? JSON.parse(contrasenasJSON) : [];
   }
 
-  // Validar que el campo de telefono no esté vacío
-  if (telefono.trim() === "") {
-    alert("Por favor, ingresa tu telefono");
-    //console.log("Por favor, ingresa tu telefono." + telefono)
-    event.preventDefault();
-    validateForm = false;
+  // Función para validar el formulario de registro
+  function validateForm(event) {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let telefono = document.getElementById("telefono").value;
+    let password = document.getElementById("password").value;
+    let usuario = document.getElementById("usuario").value;
+    let validateForm = true;
+
+    if (name.trim() === "") {
+      alert("Por favor, ingresa tu nombre");
+      event.preventDefault();
+      validateForm = false;
+    }
+
+    if (usuario.trim() === "") {
+      alert("Por favor, ingresa tu usuario");
+      event.preventDefault();
+      validateForm = false;
+    }
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.match(emailPattern)) {
+      alert("Por favor, ingresa un correo electrónico válido");
+      event.preventDefault();
+      validateForm = false;
+    }
+
+    if (telefono.trim() === "") {
+      alert("Por favor, ingresa tu telefono");
+      event.preventDefault();
+      validateForm = false;
+    }
+
+    if (password.length < 8) {
+      alert("La contraseña debe tener al menos 8 caracteres");
+      event.preventDefault();
+      validateForm = false;
+    }
+
+    // Si todo está correcto, el formulario se envía
+    if (validateForm) {
+      guardarContrasenaLocalStorage(password);
+      alert("Formulario correcto gracias por registrarse...");
+      console.log("Formulario correcto gracias por registrarse...");
+      formulario.reset();
+    } else {
+      event.preventDefault();
+    }
+
+    return validateForm;
   }
 
-  // Validar que la contraseña tenga al menos 8 caracteres
-  if (password.length < 8) {
-    alert("La contraseña debe tener al menos 8 caracteres");
-    //console.log("La contraseña debe tener al menos 8 caracteres.")
-    event.preventDefault();
-    validateForm = false;
+  //Funcion para login
+
+  function iniciarSesion() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Verificar las credenciales del usuario en el Local Storage
+    const storedPasswords = obtenerContrasenasLocalStorage();
+    const contrasenaGenerada = storedPasswords.find((contrasena) => contrasena === password);
+
+    // Comparar el nombre de usuario y contraseña con los valores guardados en el Local Storage
+    if (contrasenaGenerada) {
+      // Si la contraseña ingresada coincide con una contraseña generada y guardada
+      alert("Inicio sesión exitoso...\nUsuario: " + username + "\nContraseña: " + password);
+    } else {
+      // Si la contraseña ingresada no coincide con ninguna contraseña generada y guardada
+      alert("Usuario o contraseña incorrectos. Intenta de nuevo.");
+    }
+    
   }
-
-  
-  // Si todo está correcto, el formulario se envía
-  if (validateForm) {
-    alert("Formulario correcto gracias por registrarse...");
-    console.log("Formulario correcto gracias por registrarse...");
-    formulario.reset()
-    event.preventDefault();
-  } else {
-    event.preventDefault()
-  }
-  return validateForm;
-
-}
-
-// Función para generar contraseñas aleatorias
-function generarContrasenaAleatoria() {
-  const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  const longitudContrasena = 8;
-  let contrasena = "";
-
-  for (let i = 0; i < longitudContrasena; i++) {
-    const indice = Math.floor(Math.random() * caracteres.length);
-    contrasena += caracteres.charAt(indice);
-  }
-
-  document.getElementById("password").value = contrasena;
-  alert("Contraseña aleatoria generada: " + contrasena);
-  console.log("Contraseña aleatoria generada: " + contrasena)
-
-}
-
-//login.html
-
-function iniciarSesion() {
-  let username = document.getElementById("username").value;
-  let password = document.getElementById("password").value;
-
-
-  // verificar las credenciales del usuario en servidor
-  console.log("\nUsuario: " + username + "\nContraseña: " + password)
-  //comparar el nombre de usuario y contraseña con valores predefinidos o hacer una solicitud a un servidor para validar las credenciales
-
-  // En este ejemplo, simplemente mostramos una alerta con los datos del usuario ingresados
-  alert("Inicio sesión...\nUsuario: " + username + "\nContraseña: " + password);
-}
