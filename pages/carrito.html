@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carrito</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon" />
+    <style type="text/css"></style>
+    <!--script src="../js/bootstrap.min.js"></script-->
+    <!--script src="../js/main.js"></script-->
+
+
+    <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+
+                <img src="../assets/images/LOGO.png" alt="Logo" width="150" height="100"
+                    class="d-inline-block align-text-top">
+                <a class="navbar-brand" href=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./novedades.html">NOVEDADES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./login.html">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Registro.html">Registrarse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./carrito.html"><img src="../assets/images/carrit-png.png"
+                                    alt="" width="30px" height="30px"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../assets/images/1.jpg" class="d-block w-100" alt="imagen1" height="350">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/images/2.jpg" class="d-block w-100" alt="imagen2" height="350">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/images/3.jpg" class="d-block w-100" alt="imagen3" height="350">
+                </div>
+                <div class="carousel-item">
+                    <img src="../assets/images/4.jpg" class="d-block w-100" alt="imagen4" height="350">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+
+        <div class="search__box">
+
+            <label for="product"></label>
+            <input type="text" id="product" placeholder="Buscar...">
+            <button id="show">Buscar</button>
+
+        </div>
+
+        <body>
+            <main>
+            <section class="destacados">
+            <div class="carrito">
+                <h2>Carrito de compras</h2>
+                <div id="productos">
+                    <h1>Productos</h1>
+                    <ul>
+                        <li>
+                            <article class="destacados__card-product">
+                                <div>
+                                    <small>OFERTAS</small>
+                                    <img src="../assets/images/combo veg-bloom.jpg" alt="" />
+                                </div>
+                                <h3>COMBO 1</h3>
+                                <p>combo destacado para tus cultivos</p>
+                                <button onclick="agregarAlCarrito('COMBO 1', 450)">Agregar al carrito</button>
+                                <!--a href="">mas info</a-->
+                            </article>
+                            
+                        </li>
+                        <li>
+                            <article class="destacados__card-product">
+                                <div>
+                                    <small>OFERTAS</small>
+                                    <img src="../assets/images/combo veg-bloom.jpg" alt="" />
+                                </div>
+                                <h3>COMBO 2</h3>
+                                <p>combo destacado para tus cultivos</p>
+                                <button onclick="agregarAlCarrito('COMBO 2', 830)">Agregar al carrito</button>
+                                <!--a href="">mas info</a-->
+                            </article>
+                            
+                        </li>
+                        <li>
+                            <article class="destacados__card-product">
+                                <div>
+                                    <small>OFERTAS</small>
+                                    <img src="../assets/images/combo veg-bloom.jpg" alt="" />
+                                </div>
+                                <h3>COMBO 3</h3>
+                                <p>combo destacado para tus cultivos</p>
+                                <button onclick="agregarAlCarrito('COMBO 3', 620)">Agregar al carrito</button>
+                                <!--a href="">mas info</a-->
+                            </article>
+                            
+                        </li>
+                        <li>
+                            <article class="destacados__card-product">
+                                <div>
+                                    <small>OFERTAS</small>
+                                    <img src="../assets/images/combo veg-bloom.jpg" alt="" />
+                                </div>
+                                <h3>COMBO 3</h3>
+                                <p>combo destacado para tus cultivos</p>
+                                <button onclick="agregarAlCarrito('COMBO 4', 920)">Agregar al carrito</button>
+                                <!--a href="">mas info</a-->
+                            </article>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="carrito">
+                    <h2>Carrito</h2>
+                    <ul id="carrito-lista">
+                    </ul>
+                    <p>Total: $<span id="total">0</span></p>
+                    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+                </div>
+            </div>
+        </section>
+        </main>
+            <footer>
+
+                <div class="envios">
+                    <aside>
+                        <img src="../assets/images/envios.png" alt="envios" />
+                    </aside>
+                </div>
+                <div class="redes-sociales">
+                    <div class="redes-sociales__redes">
+                        <a href="https://www.instagram.com/eltallogrowshop/"><img
+                                src="../assets/images/instagram-png.png" alt="" height="" width=""></a>
+                    </div>
+                    <div class="redes-sociales__redes">
+                        <a href="https://www.facebook.com/Eltallogrowshop"><img src="../assets/images/face.png" alt=""
+                                height="" width=""></a>
+                    </div>
+                    <div class="redes-sociales__redes">
+                        <a href="https://twitter.com/eltallogrowshop"><img src="../assets/images/twitter1.png" alt=""
+                                height="" width=""></a>
+                    </div>
+                    <div class="redes-sociales__redes">
+                        <a href="https://www.youtube.com/@eltallogrowshop/about"><img src="../assets/images/youtube.png"
+                                alt="" height="" width=""></a>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <small> &copy; Todos los derechos reservados </small>
+                </div>
+            </footer>
+
+            <div class="whatsapp">
+                <a href="https://wa.me/c/5491120226907">
+                    <img src="../assets/images/whatsapp.png" alt="wpp" />
+                </a>
+
+            </div>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/main.js"></script>
+            <script src="../js/carrito.js"></script>
+
+
+        </body>
+
+</html>

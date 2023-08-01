@@ -122,6 +122,9 @@ document.getElementById("show").addEventListener("click", function () {
     if (contrasenaGenerada) {
       // Si la contraseña ingresada coincide con una contraseña generada y guardada
       alert("Inicio sesión exitoso...\nUsuario: " + username + "\nContraseña: " + password);
+      //redireccionamiento de pagina
+      window.location.href = "carrito.html";
+      
     } else {
       // Si la contraseña ingresada no coincide con ninguna contraseña generada y guardada
       alert("Usuario o contraseña incorrectos. Intenta de nuevo.");
