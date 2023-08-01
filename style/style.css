@@ -79,7 +79,7 @@ footer p {
   gap: 2px;
 }
 
-#productos {
+/*#productos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -106,7 +106,7 @@ footer p {
 
 button {
   cursor: pointer;
-}
+}*/
 
 ul {
   list-style: none;
