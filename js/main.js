@@ -55,6 +55,20 @@ document.getElementById("show").addEventListener("click", function () {
     return contrasenasJSON ? JSON.parse(contrasenasJSON) : [];
   }
 
+  //nuevo
+  // Función para guardar el usuario y la contraseña en Local Storage utilizando JSON
+function guardarUsuarioYContrasenaLocalStorage(usuario, contrasena) {
+  const usuariosGuardados = obtenerUsuariosYContrasenasLocalStorage();
+  usuariosGuardados.push({ usuario: usuario, contrasena: contrasena });
+  localStorage.setItem("usuarios", JSON.stringify(usuariosGuardados));
+}
+
+// Función para obtener los usuarios y contraseñas guardados en Local Storage
+function obtenerUsuariosYContrasenasLocalStorage() {
+  const usuariosJSON = localStorage.getItem("usuarios");
+  return usuariosJSON ? JSON.parse(usuariosJSON) : [];
+}
+
   // Función para validar el formulario de registro
   function validateForm(event) {
     let name = document.getElementById("name").value;
@@ -95,15 +109,32 @@ document.getElementById("show").addEventListener("click", function () {
       validateForm = false;
     }
 
+    //nuevo
+
+    // Comprobamos si el usuario ya existe
+  const usuariosGuardados = obtenerUsuariosYContrasenasLocalStorage();
+  const existingUser = usuariosGuardados.find(user => user.usuario === usuario);
+
+  if (existingUser) {
+    alert("El nombre de usuario ya está en uso. Por favor, elige otro nombre de usuario.");
+    event.preventDefault();
+    validateForm = false;
+  }
+
     // Si todo está correcto, el formulario se envía
     if (validateForm) {
+      guardarUsuarioYContrasenaLocalStorage(usuario);
       guardarContrasenaLocalStorage(password);
-      alert("Formulario correcto gracias por registrarse...");
+      alert("Formulario correcto gracias por registrarse... ahora puedes loguearte");
+      
       console.log("Formulario correcto gracias por registrarse...");
       formulario.reset();
+      
     } else {
       event.preventDefault();
     }
+
+    window.location.href = "login.html";
 
     return validateForm;
   }
