@@ -3,10 +3,9 @@
 Proyecto CODERHOUSE
 
 **PROYECTO JAVASCRIP
-   2DA ENTREGA**
+   3ra ENTREGA**
 
-   todas las acciones se muestran en consola y en propia web
-   
+     
 **PAGINA REGISTRO EN JAVASCRIP**
 
 **Incluido buscador solo en registro.html**
@@ -17,6 +16,12 @@ https://dgodoy34.github.io/proyecto0/pages/Registro.html
 
 **PAGINA LOGIN EN JAVASCRIP**
 
+se ingresa con usuario y contraseñas creados en el registro
+
 https://dgodoy34.github.io/proyecto0/pages/login.html
+
+**PAGINA CARRITO EN JAVASCRIP**
+
+Se utiliza JSON y Local storage
 
 **Diego Godoy**
