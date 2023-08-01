@@ -79,7 +79,34 @@ footer p {
   gap: 2px;
 }
 
+#productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#carrito {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
 
+#carrito-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+#carrito-lista li {
+  margin-bottom: 5px;
+}
+
+#total {
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
 
 ul {
   list-style: none;
