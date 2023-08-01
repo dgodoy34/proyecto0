@@ -5,12 +5,14 @@ Proyecto CODERHOUSE
 **PROYECTO JAVASCRIP
    3ra ENTREGA**
 
-     
-**PAGINA REGISTRO EN JAVASCRIP**
-
 **Incluido buscador solo en registro.html**
 acciones de busqueda "macetas" "fertilizantes" "plantas"
 
+**PAGINA REGISTRO EN JAVASCRIP**
+
+se utiliza Json y Local storage
+
+se agrega validacion de usuario repetido
 
 https://dgodoy34.github.io/proyecto0/pages/Registro.html
 
