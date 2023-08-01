@@ -22,6 +22,8 @@ https://dgodoy34.github.io/proyecto0/pages/login.html
 
 **PAGINA CARRITO EN JAVASCRIP**
 
-Se utiliza JSON y Local storage
+Se utiliza JSON y Local storage 
+
+Funcion de agregados de producto a carrito y vaciado de los mismos, los productos quedan grabados en la aplicacion
 
 **Diego Godoy**
