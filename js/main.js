@@ -122,7 +122,7 @@ function obtenerUsuariosYContrasenasLocalStorage() {
     
   }
 
-  return validateForm;
+ 
 
     // Si todo está correcto, el formulario se envía
     if (validateForm) {
