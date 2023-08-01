@@ -26,4 +26,6 @@ Se utiliza JSON y Local storage
 
 Funcion de agregados de producto a carrito y vaciado de los mismos, los productos quedan grabados en la aplicacion
 
+https://dgodoy34.github.io/proyecto0/pages/carrito.html
+
 **Diego Godoy**
