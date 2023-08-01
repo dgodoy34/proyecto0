@@ -119,7 +119,10 @@ function obtenerUsuariosYContrasenasLocalStorage() {
     alert("El nombre de usuario ya está en uso. Por favor, elige otro nombre de usuario.");
     event.preventDefault();
     validateForm = false;
+    
   }
+
+  return validateForm;
 
     // Si todo está correcto, el formulario se envía
     if (validateForm) {
