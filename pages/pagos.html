@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registro</title>
+  <link rel="stylesheet" href="../style/pagos.css">
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../style/bootstrap.min.css" />
   <link rel="stylesheet" href="../style/style.css">
@@ -84,88 +85,28 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-
-
-    <div class="search__box">
-
-      <label for="product"></label>
-      <input type="text" id="product" placeholder="Buscar...">
-      <button id="show">Buscar</button>
-
-      <!--form class="d-flex" role="search" onsubmit="return realizarBusqueda()">
-        <input class="form-control me-2" type="search" id="product" placeholder="Buscar..." aria-label="Search">
-        <button class="search__box-button" type="submit">Buscar</button>
-      </form-->
-
-    </div>
-
-    <div class="titulo">
-      <span>REGISTRARSE</span>
-    </div>
+   
+     </div>
   </header>
-  <main>
-    <h2>Formulario de Registro</h2>
-
-
-    <form id="registration-form" onsubmit="return validateForm(event)">
-      <div class="flexbox-contac">
-        <div class="box-contac">
-          <label for="usuario">Nombre de Usuario:</label>
-          <input type="text" placeholder="Usuario" id="usuario" required />
-          <br>
-        </div>
-        <div class="box-contac">
-          <label for="name">Nombre y Apellido:</label>
-          <input type="text" placeholder="Nombre y Apellido" id="name" />
-          <br>
-        </div>
-        <div class="box-contac">
-          <label for="email">Correo electrónico:</label>
-          <input type="email" placeholder="Ingrese su correo electrónico" id="email" />
-          <br>
-        </div>
-        <div class="box-contac">
-          <label for="telefono">Ingrese su teléfono:</label>
-          <input type="text" placeholder="Teléfono" id="telefono" />
-          <br>
-        </div>
-        <div class="box-contac">
-          <label for="password">Contraseña:</label>
-          <input type="text" id="password">
-          <button type="button" onclick="generarContrasenaAleatoria()">Generar Contraseña</button>
-          <br>
-        </div>
-        <div class="box-contac">
-          <label for="pais">Seleccione su país:</label>
-          <select name="" id="pais">
-            <option value="argentina">Argentina</option>
-            <option value="chile">Chile</option>
-            <option value="uruguay">Uruguay</option>
-          </select>
-        </div>
-        <div class="box-contac">
-          <input type="checkbox" id="check" required />
-          <label for="check">Acepto términos y condiciones</label>
-        </div>
-        <div class="button">
-          <button type="reset">Limpiar formulario</button>
-        </div>
-        <div>
-          <button type="submit" value="Registrarse">REGISTRARSE</button>
-        </div>
-      </div>
+  <main><div class="titulo">
+    <span>Página de Pago</span>
+    </div>
+    <form id="payment-form">
+        <label for="card-number">Número de Tarjeta:</label>
+        <input type="text" id="card-number" placeholder="Ingrese el número de tarjeta" required>
+        <label for="card-name">Nombre en la Tarjeta:</label>
+        <input type="text" id="card-name" placeholder="Ingrese el nombre en la tarjeta" required>
+        <label for="expiry-date">Fecha de Expiración:</label>
+        <input type="text" id="expiry-date" placeholder="MM/AA" required>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" placeholder="CVV" required>
+        <button type="submit">Realizar Pago</button>
     </form>
 
+    
   </main>
 
-  <div>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3273.076543328558!2d-58.55803118491452!3d-34.87942417964479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd9906b89630d%3A0x5ffc96d6ce48ff84!2sBarrio%20Parque%20La%20Esperanza!5e0!3m2!1ses!2sar!4v1680046236862!5m2!1ses!2sar"
-      width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
-
+  
   <footer>
 
     <div class="envios">
@@ -203,6 +144,7 @@
     </a>
 
   </div>
+  <script src="../js/pago.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/main.js"></script>

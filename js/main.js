@@ -28,7 +28,9 @@ document.getElementById("show").addEventListener("click", function () {
 
 //fin buscador
 
-// Función para generar contraseñas aleatorias
+
+// Funciones de generación y almacenamiento de contraseñas
+
 function generarContrasenaAleatoria() {
   const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   const longitudContrasena = 8;
@@ -42,123 +44,82 @@ function generarContrasenaAleatoria() {
   document.getElementById("password").value = contrasena;
 }
 
-// Función para guardar la contraseña en Local Storage utilizando JSON
-function guardarContrasenaLocalStorage(contrasena) {
-  const contrasenasGuardadas = obtenerContrasenasLocalStorage();
-  contrasenasGuardadas.push(contrasena);
-  localStorage.setItem("contrasenas", JSON.stringify(contrasenasGuardadas));
-}
-
-// Función para obtener las contraseñas guardadas en Local Storage
-function obtenerContrasenasLocalStorage() {
-  const contrasenasJSON = localStorage.getItem("contrasenas");
-  return contrasenasJSON ? JSON.parse(contrasenasJSON) : [];
-}
-
-//nuevo
-// Función para guardar el usuario y la contraseña en Local Storage utilizando JSON
 function guardarUsuarioYContrasenaLocalStorage(usuario, contrasena) {
   const usuariosGuardados = obtenerUsuariosYContrasenasLocalStorage();
   usuariosGuardados.push({ usuario: usuario, contrasena: contrasena });
   localStorage.setItem("usuarios", JSON.stringify(usuariosGuardados));
 }
 
-// Función para obtener los usuarios y contraseñas guardados en Local Storage
 function obtenerUsuariosYContrasenasLocalStorage() {
   const usuariosJSON = localStorage.getItem("usuarios");
   return usuariosJSON ? JSON.parse(usuariosJSON) : [];
 }
 
-// Función para validar el formulario de registro
-function validateForm(event) {
+// Función para el registro con SweetAlert
+
+async function validateForm(event) {
+  event.preventDefault();
+
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let telefono = document.getElementById("telefono").value;
   let password = document.getElementById("password").value;
   let usuario = document.getElementById("usuario").value;
-  let validateForm = true;
 
-  if (name.trim() === "") {
-    alert("Por favor, ingresa tu nombre");
-    event.preventDefault();
-    validateForm = false;
+  // Validar campos
+  if (name.trim() === "" || usuario.trim() === "" || telefono.trim() === "" || password.length < 8 || email.trim() === "") {
+    Swal.fire('Error', 'Por favor, completa todos los campos correctamente', 'error');
+    return;
   }
 
-  if (usuario.trim() === "") {
-    alert("Por favor, ingresa tu usuario");
-    event.preventDefault();
-    validateForm = false;
-  }
-
-  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!email.match(emailPattern)) {
-    alert("Por favor, ingresa un correo electrónico válido");
-    event.preventDefault();
-    validateForm = false;
-  }
-
-  if (telefono.trim() === "") {
-    alert("Por favor, ingresa tu telefono");
-    event.preventDefault();
-    validateForm = false;
-  }
-
-  if (password.length < 8) {
-    alert("La contraseña debe tener al menos 8 caracteres");
-    event.preventDefault();
-    validateForm = false;
-  }
-
-  //nuevo
-
-  // Comprobamos si el usuario ya existe
+  // Comprobar si el usuario ya existe
   const usuariosGuardados = obtenerUsuariosYContrasenasLocalStorage();
   const existingUser = usuariosGuardados.find(user => user.usuario === usuario);
 
   if (existingUser) {
-    alert("El nombre de usuario ya está en uso. Por favor, elige otro nombre de usuario.");
-    event.preventDefault();
-    validateForm = false;
-
+    Swal.fire('Error', 'El nombre de usuario ya está en uso. Por favor, elige otro nombre de usuario.', 'error');
+    return;
   }
-  // Si todo está correcto, el formulario se envía
-  if (validateForm) {
-    guardarUsuarioYContrasenaLocalStorage(usuario);
-    guardarContrasenaLocalStorage(password);
-    alert("Formulario correcto gracias por registrarse... ahora puedes loguearte");
 
-    console.log("Formulario correcto gracias por registrarse...");
-    formulario.reset();
-
-  } else {
-    event.preventDefault();
-  }
+  // Mostrar SweetAlert de éxito
+  const result = await Swal.fire({
+    icon: 'success',
+    title: 'Formulario correcto gracias por registrarse... ahora puedes loguearte',
+    text: '¡Registro exitoso!',
+    showCancelButton: false,
+    confirmButtonText: 'OK'
+    
+  });
 
   window.location.href = "login.html";
 
-  return validateForm;
+  if (result.isConfirmed) {
+    guardarUsuarioYContrasenaLocalStorage(usuario, password);
+    document.getElementById("formulario").reset();
+    
+  }
 }
-
-//Funcion para login
+// Función para el inicio de sesión con SweetAlert
 
 function iniciarSesion() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  // Verificar las credenciales del usuario en el Local Storage
-  const storedPasswords = obtenerContrasenasLocalStorage();
-  const contrasenaGenerada = storedPasswords.find((contrasena) => contrasena === password);
+  const storedUsers = obtenerUsuariosYContrasenasLocalStorage();
+  const user = storedUsers.find((user) => user.usuario === username && user.contrasena === password);
 
-  // Comparar el nombre de usuario y contraseña con los valores guardados en el Local Storage
-  if (contrasenaGenerada) {
-    // Si la contraseña ingresada coincide con una contraseña generada y guardada
-    alert("Inicio sesión exitoso...\nUsuario: " + username + "\nContraseña: " + password);
-    //redireccionamiento de pagina
+  if (user) {
+    //Swal.fire('Inicio de sesión exitoso');
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Inicio de sesión exitoso',
+      showConfirmButton: false,
+      timer: 3000
+    })
+   
     window.location.href = "carrito.html";
-
   } else {
-    // Si la contraseña ingresada no coincide con ninguna contraseña generada y guardada
-    alert("Usuario o contraseña incorrectos. Intenta de nuevo.");
+    Swal.fire('Error', 'Usuario o contraseña incorrectos. Intenta de nuevo.', 'error');
   }
-
 }

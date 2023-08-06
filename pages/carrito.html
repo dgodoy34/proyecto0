@@ -5,10 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>carrito</title>
+    <link rel="stylesheet" href="../style/varios.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../style/bootstrap.min.css" />
     <link rel="stylesheet" href="../style/style.css" />
     <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet">
+
     <style type="text/css"></style>
     <!--script src="../js/bootstrap.min.js"></script-->
     <!--script src="../js/main.js"></script-->
@@ -87,17 +91,15 @@
 
 
 
-        <div class="search__box">
-
-            <label for="product"></label>
-            <input type="text" id="product" placeholder="Buscar...">
-            <button id="show">Buscar</button>
-
+        <div class="search-container">
+            <form action="#" method="GET">
+                <input type="text" name="search" id="search" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
         </div>
-
         <body>
 
-            <main>
+            <!--main>
                 <div class="titulo">
                     <span>Carrito de compras</span>
                 </div>
@@ -116,7 +118,7 @@
                             <h3>COMBO 1</h3>
                             <p>combo destacado para tus cultivos</p>
                             <button onclick="agregarAlCarrito('COMBO 1', 450)">Agregar al carrito</button>
-                            <!-- <a href="">Mas Info</a> -->
+                            < <a href="">Mas Info</a> >
                         </div>
                     </article>
 
@@ -130,7 +132,7 @@
                             <h3>COMBO 2</h3>
                             <p>combo destacado para tus cultivos</p>
                             <button onclick="agregarAlCarrito('COMBO 2', 830)">Agregar al carrito</button>
-                            <!-- <a href="">mas info</a> -->
+                            <<a href="">mas info</a> >
                         </div>
                     </article>
 
@@ -144,7 +146,7 @@
                             <h3>COMBO 3</h3>
                             <p>combo destacado para tus cultivos</p>
                             <button onclick="agregarAlCarrito('COMBO 3', 620)">Agregar al carrito</button>
-                            <!-- <a href="">Mas Info</a> -->
+                            < <a href="">Mas Info</a> >
                         </div>
                     </article>
 
@@ -158,7 +160,7 @@
                             <h3>COMBO 4</h3>
                             <p>combo destacado para tus cultivos</p>
                             <button onclick="agregarAlCarrito('COMBO 4', 920)">Agregar al carrito</button>
-                            <!-- <a href="">mas info</a> -->
+                            < <a href="">mas info</a> >
                         </div>
                     </article>
 
@@ -172,6 +174,96 @@
                     <button onclick="vaciarCarrito()">Vaciar Carrito</button>
                 </div>
                 </section>
+            </main-->
+
+            <main>
+                <div class="titulo">
+                    <span>Carrito de compras</span>
+                </div>
+        
+                <div id="productos">
+                    <h1>Productos</h1>
+                    <!-- Agregar los productos destacados aquí -->
+                </div>
+        
+                <section class="destacados">
+                    <article class="destacados__card-product">
+                        <div>
+                            <small>DESTACADOS</small>
+                            <img src="../assets/images/vamp combo.jpg" alt="" />
+
+                            <p>COMBO VAMP</p>
+                            <p>Fertilizante especial para tus plantas floración y vegetación</p>
+                            <h3>COMBO 1</h3>
+                            <p>combo destacado para tus cultivos</p>
+                            <button onclick="agregarAlCarrito('COMBO 1', 450)">Agregar al carrito</button>
+                            <!--<a href="">Mas Info</a>-->
+                        </div>
+                    </article>
+
+                    <article class="destacados__card-product">
+                        <div>
+                            <small>DESTACADOS</small>
+                            <img src="../assets/images/maceta-roots-house.jpg" alt="" />
+
+                            <p>Macetas ROOT-HOUSE</p>
+                            <p>Macetas inteligentes para tus cultivos, únicas con autocortes de raíces</p>
+                            <h3>COMBO 2</h3>
+                            <p>combo destacado para tus cultivos</p>
+                            <button onclick="agregarAlCarrito('COMBO 2', 830)">Agregar al carrito</button>
+                            <!--<a href="">mas info</a> -->
+                        </div>
+                    </article>
+
+                    <article class="destacados__card-product">
+                        <div>
+                            <small>DESTACADOS</small>
+                            <img src="../assets/images/Tripack-Top-Crop.jpg" alt="" />
+
+                            <p>TRI-PACK TOP CROP</p>
+                            <p>El complemento ideal para tu cultivo, para ciclo completo</p>
+                            <h3>COMBO 3</h3>
+                            <p>combo destacado para tus cultivos</p>
+                            <button onclick="agregarAlCarrito('COMBO 3', 620)">Agregar al carrito</button>
+                            <!--<a href="">Mas Info</a> -->
+                        </div>
+                    </article>
+
+                    <article class="destacados__card-product">
+                        <div>
+                            <small>DESTACADOS</small>
+                            <img src="../assets/images/growmixpro.jpg" alt="" />
+
+                            <p>SUSTRATO GROWMIX</p>
+                            <p>El mejor sustrato para tus plantas tanto vegetación como floración</p>
+                            <h3>COMBO 4</h3>
+                            <p>combo destacado para tus cultivos</p>
+                            <button onclick="agregarAlCarrito('COMBO 4', 920)">Agregar al carrito</button>
+                             <!--a href="">mas info</a--> 
+                        </div>
+                    </article>
+
+                </section>
+                <div id="carrito">
+                    <h2>Carrito</h2>
+                    <div id="carrito-lista">
+                    </div>
+                    <p>Total: $<span id="total">0</span></p>
+                    <button id="vaciar-carrito">Vaciar Carrito</button>
+                    <button id="finalizar-compra">Finalizar Compra</button>
+                </div>
+                <div id="modal-carrito" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Carrito de Compra</h2>
+                        <div id="popup-carrito">
+                            <!-- Contenido del carrito aquí -->
+                        </div>
+                        <p>Total: $<span id="modal-total">0.00</span></p>
+                        <button id="btn-pagar">Finalizar Compra</button>
+                        
+                    </div>
+                </div>
             </main>
             <footer>
 
@@ -210,6 +302,7 @@
                 </a>
 
             </div>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="../js/bootstrap.min.js"></script>
             <script src="../js/main.js"></script>
             <script src="../js/carrito.js"></script>
