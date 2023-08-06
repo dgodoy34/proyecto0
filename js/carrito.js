@@ -259,7 +259,7 @@ function pagar() {
     allowOutsideClick: false
   }).then((result) => {
     if (result.isConfirmed) {
-      window.location.href = '../js/pagos.html'; // Cambia la URL por la de tu página de pago real
+      window.location.href = '../pages/pagos.html'; // Cambia la URL por la de tu página de pago real
     }
   });
 }
