@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Redirigir a una página de confirmación u otra acción
-                    window.location.href = '../index.hml';
+                    window.location.href = '../index.html';
                 }
             });
         }, 1500); // Simulación de tiempo de proceso
