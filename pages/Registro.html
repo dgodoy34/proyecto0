@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../style/bootstrap.min.css" />
   <link rel="stylesheet" href="../style/style.css">
- 
+
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.20/dist/sweetalert2.min.css" rel="stylesheet">
 
   <!--script src="../js/bootstrap.min.js"></script-->
@@ -108,7 +108,9 @@
     <h2>Formulario de Registro</h2>
 
 
+    <!--form id="registration-form"-->
     <form id="registration-form" onsubmit="return validateForm(event)">
+      <!--form id="registration-form" onsubmit="return validateForm(event)"-->
       <div class="flexbox-contac">
         <div class="box-contac">
           <label for="usuario">Nombre de Usuario:</label>
@@ -152,7 +154,9 @@
           <button type="reset">Limpiar formulario</button>
         </div>
         <div>
-          <button type="submit" value="Registrarse">REGISTRARSE</button>
+          <!--button type="submit" value="Registrarse">REGISTRARSE</button-->
+          <!--button type="submit" onclick="validateForm(event)">REGISTRARSE</button-->
+          <button type="submit" id="button">REGISTRARSE</button>
         </div>
       </div>
     </form>
@@ -203,9 +207,13 @@
     </a>
 
   </div>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/main.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">emailjs.init('fksMZpFl9TQtslnTL')</script>
 </body>
 
 </html>

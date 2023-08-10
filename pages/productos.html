@@ -117,16 +117,7 @@
     </select>
 
     <p>Todo lo que necesitas para tus plantas</p>
-    <!--div>
-    <h2 class="sectionOverflow">
-       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, quasi, facere incidunt deserunt atque voluptatibus, ut deleniti accusamus animi laboriosam iste ducimus. Ullam obcaecati voluptates, minus facere maxime quibusdam consequuntur!picture-in-picture </p>
-<img src="../assets/images/LOGO.png" alt="logo png"/>
-
-    </div>
-    <div class="categoria-product">
-      <a href="./pages/productos.html">BIENVENIDOS</a>
-    </div-->
-
+   
     <div class="destacados__card-title">DESTACADOS DEL MES</div>
     <section class="destacados">
       <article class="destacados__card-product">
@@ -177,7 +168,11 @@
         </div>
         <h3>COMBO VEGETACION</h3>
         <p>combo destacado para tus cultivos</p>
-        <a href="">mas info</a>
+        <!--button onclick="agregarAlCarrito('Producto 2', 20)">Agregar al carrito</button-->
+        <div>
+          <a><button onclick="mostrarDetallesProducto('Producto 2', '20')">Ver Detalles</button>
+          </a>
+        </div>
 
       </article>
       <article>
@@ -186,7 +181,10 @@
         </div>
         <h3>COMBO VEGETACION</h3>
         <p>combo destacado para tus cultivos</p>
-        <a href="">mas info</a>
+        <div>
+        <a><button onclick="mostrarDetallesProducto('Producto 1', 30)">Ver Detalles</button>
+        </a>
+      </div>
 
       </article>
       <article>
@@ -245,41 +243,7 @@
       </article>
     </section>
 
-    <!--<section>     
-<div class= "tabla">
-    <center>
-    <table border="2">
-        <thead>
-           
-            <tr>
-                <th>promociones</th>
-                
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                
-                <td>FERTILIZANTE PARA HORMIGA</td>
-                
-            </tr>
-            <tr>
-                <td>MACETAS</td>
-                
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>TIERRA POR 50DM3</td>
-                
-            </tr>
-        </tfoot>
-    </table>
-       
-</center>
-</div>
-</section>-->
-
-  </main>
+   </main>
   <footer>
 
     <div class="envios">
@@ -317,8 +281,11 @@
     </a>
 
   </div>
-
-
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/carrito.js"></script>
+  <script src="../js/productos.js"></script>
 </body>
 
 </html>

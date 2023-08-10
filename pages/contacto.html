@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="../style/style.css">
   <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon" />
   <script src="../js/bootstrap.min.js"></script>
-</head>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">emailjs.init('fksMZpFl9TQtslnTL')</script>
+  </head>
 
 <body>
   <header>
@@ -88,7 +90,7 @@
     </div>
   </header>
   <main>
-    <form class="flexbox-contac" action="">
+    <!--form class="flexbox-contac" action="">
       <div class="box-contac">
 
         <label for="nombre">ingrese su nombre</label>
@@ -127,6 +129,30 @@
         <button type="reset">limpiar formulario</button>
       </div>
       <textarea name="comentario" rows="5" cols="85" class="text-area">Escribe aquí tu comentario: </textarea>
+    </form-->
+    <form class="flexbox-contac" id="registration-form" onsubmit="return enviarCorreoDeConfirmacion(event)">
+      <div class="box-contac">
+        <label for="nombre">Ingrese su nombre</label>
+        <input type="text" placeholder="Ingrese su nombre" id="nombre" />
+      </div>
+      <div class="box-contac">
+        <label for="email">Ingrese su email</label>
+        <input type="email" placeholder="Ingrese su email" id="email" />
+      </div>
+      <div class="box-contac">
+        <label for="tel">Ingrese su teléfono</label>
+        <input type="phone" placeholder="Teléfono" id="tel" />
+      </div>
+      <div class="box-contac">
+        <input type="checkbox" id="check" />
+        <label for="check">Acepto terminos y condiciones</label>
+      </div>
+      <!-- Agrega el resto de los campos del formulario aquí -->
+      <div class="button">
+        <button type="submit">Enviar formulario</button>
+        <button type="reset">Limpiar formulario</button>
+      </div>
+      <textarea name="comentario" rows="5" cols="85" class="text-area">Escribe aquí tu comentario:</textarea>
     </form>
   </main>
 
@@ -174,6 +200,12 @@
     </a>
 
   </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/contacto.js"></script>
+  
+  
 
 </body>
 
