@@ -132,16 +132,22 @@
     </form-->
     <form class="flexbox-contac" id="registration-form" onsubmit="return enviarCorreoDeConfirmacion(event)">
       <div class="box-contac">
-        <label for="nombre">Ingrese su nombre</label>
-        <input type="text" placeholder="Ingrese su nombre" id="nombre" />
+        <!--label for="from_name">Ingrese su nombre</label>
+        <input type="text" placeholder="Ingrese su nombre" id="nombre" /-->
+        <label for="nombre">ingrese su nombre</label>
+        <input type="text" name="nombre" placeholder="nombre" id="nombre">
       </div>
       <div class="box-contac">
-        <label for="email">Ingrese su email</label>
-        <input type="email" placeholder="Ingrese su email" id="email" />
+        <label for="email">ingrese su mail</label>
+        <input type="text" name="email" placeholder="email" id="email">
+        <!--label for="email">Ingrese su email</label>
+        <input type="email" placeholder="Ingrese su email" id="email" /-->
       </div>
       <div class="box-contac">
-        <label for="tel">Ingrese su teléfono</label>
-        <input type="phone" placeholder="Teléfono" id="tel" />
+        <label for="tel">ingrese su telefono</label>
+        <input type="text" name="tel" placeholder="telefono" id="tel">
+        <!--label for="tel">Ingrese su teléfono</label>
+        <input type="phone" placeholder="Teléfono" id="tel" /-->
       </div>
       <div class="box-contac">
         <input type="checkbox" id="check" />
@@ -152,7 +158,7 @@
         <button type="submit">Enviar formulario</button>
         <button type="reset">Limpiar formulario</button>
       </div>
-      <textarea name="comentario" rows="5" cols="85" class="text-area">Escribe aquí tu comentario:</textarea>
+      <textarea name="comentario" rows="5" cols="85" class="text-area" id="comentario">Escribe aquí tu comentario:</textarea>
     </form>
   </main>
 
