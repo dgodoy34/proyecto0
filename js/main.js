@@ -1,6 +1,6 @@
 //inicio de buscador de registro.html
 
-// Array con los elementos a buscar
+/*/ Array con los elementos a buscar
 const elementos = [
   { names: "Macetas", precioUnitario: 500 },
   { names: "Fertilizantes", precioUnitario: 250 },
@@ -28,7 +28,7 @@ document.getElementById("show").addEventListener("click", function () {
 
 
 
-//fin buscador
+//fin buscador*/
 
 
 // Funciones de generación y almacenamiento de contraseñas
