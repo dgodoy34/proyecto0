@@ -49,7 +49,7 @@ function vaciarCarrito() {
   mostrarCarrito();
 }
 
-// Resto del código relacionado con eventos y funciones
+
 
 // Asociar evento a botón "Finalizar Compra" en el modal
 const finalizarCompraBtn = document.getElementById('finalizar-compra');
@@ -138,7 +138,7 @@ function pagar() {
     allowOutsideClick: false
   }).then((result) => {
     if (result.isConfirmed) {
-      window.location.href = '../pages/pagos.html'; // Cambia la URL por la de tu página de pago real
+      window.location.href = '../pages/pagos.html'; 
     }
   });
 }
