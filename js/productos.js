@@ -1,25 +1,3 @@
-function agregarAlCarrito(nombreProducto, precioProducto) {
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-    const productoExistente = carrito.find(function(item) {
-        return item.nombre === nombreProducto;
-    });
-
-    if (productoExistente) {
-        productoExistente.cantidad += 1;
-    } else {
-        const nuevoProducto = {
-            nombre: nombreProducto,
-            precio: precioProducto,
-            cantidad: 1
-        };
-        carrito.push(nuevoProducto);
-    }
-
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
-
-//----------------------------------------------------------------
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 function guardarCarritoEnLocalStorage() {

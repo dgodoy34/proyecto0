@@ -97,19 +97,62 @@
                 <button type="submit">Search</button>
             </form>
         </div>
+
         <body>
 
-           <main>
+            <main>
                 <div class="titulo">
                     <span>Carrito de compras</span>
                 </div>
-        
+
                 <div id="productos">
                     <h1>Productos</h1>
-                    <!-- Agregar los productos destacados aquí -->
                 </div>
-        
                 <section class="destacados">
+                    <article class="destacados__card-product">
+                        <div>
+                            <small>DESTACADOS</small>
+                            <img src="../assets/images/vamp combo.jpg" alt="" />
+
+                            <p>SUSTRATO</p>
+                            <p>Fertilizante especial para tus plantas floración y vegetación</p>
+                            <h3>PRECIO $1500</h3>
+                            <p>combo destacado para tus cultivos</p>
+                            <button class="agregar-carrito" data-nombre="Sustrato" data-precio="1500">Agregar al
+                                carrito</button>
+                            <!--<a href="">Mas Info</a>-->
+                        </div>
+                    </article>
+
+
+                    <article class="destacados__card-product">
+                        <div>
+                            <small>DESTACADOS</small>
+                            <img src="../assets/images/vamp combo.jpg" alt="" />
+
+                            <p>FERTILIZANTES</p>
+                            <p>Fertilizante especial para tus plantas floración y vegetación</p>
+                            <h3>PRECIO $2500</h3>
+                            <p>combo destacado para tus cultivos</p>
+                            <button class="agregar-carrito" data-nombre="Fertilizante" data-precio="2500">Agregar al
+                                carrito</button>
+                            <!--<a href="">Mas Info</a>-->
+                        </div>
+                    </article>
+                    <article class="destacados__card-product">
+                        <div>
+                            <small>DESTACADOS</small>
+                            <img src="../assets/images/vamp combo.jpg" alt="" />
+
+                            <p>MACETAS</p>
+                            <p>Fertilizante especial para tus plantas floración y vegetación</p>
+                            <h3>PRECIO $3500</h3>
+                            <p>combo destacado para tus cultivos</p>
+                            <button class="agregar-carrito" data-nombre="Macetas" data-precio="3500">Agregar al
+                                carrito</button>
+                            <!--<a href="">Mas Info</a>-->
+                        </div>
+                    </article>
                     <article class="destacados__card-product">
                         <div>
                             <small>DESTACADOS</small>
@@ -117,56 +160,15 @@
 
                             <p>COMBO VAMP</p>
                             <p>Fertilizante especial para tus plantas floración y vegetación</p>
-                            <h3>COMBO 1</h3>
+                            <h3>PRECIO $3700</h3>
                             <p>combo destacado para tus cultivos</p>
-                            <button onclick="agregarAlCarrito('COMBO ferti', 450)">Agregar al carrito</button>
+                            <button class="agregar-carrito" data-nombre="Combo Wamp" data-precio="3700">Agregar al
+                                carrito</button>
                             <!--<a href="">Mas Info</a>-->
                         </div>
                     </article>
-
-                    <article class="destacados__card-product">
-                        <div>
-                            <small>DESTACADOS</small>
-                            <img src="../assets/images/maceta-roots-house.jpg" alt="" />
-
-                            <p>Macetas ROOT-HOUSE</p>
-                            <p>Macetas inteligentes para tus cultivos, únicas con autocortes de raíces</p>
-                            <h3>COMBO 2</h3>
-                            <p>combo destacado para tus cultivos</p>
-                            <button onclick="agregarAlCarrito('COMBO 2', 830)">Agregar al carrito</button>
-                            <!--<a href="">mas info</a> -->
-                        </div>
-                    </article>
-
-                    <article class="destacados__card-product">
-                        <div>
-                            <small>DESTACADOS</small>
-                            <img src="../assets/images/Tripack-Top-Crop.jpg" alt="" />
-
-                            <p>TRI-PACK TOP CROP</p>
-                            <p>El complemento ideal para tu cultivo, para ciclo completo</p>
-                            <h3>COMBO 3</h3>
-                            <p>combo destacado para tus cultivos</p>
-                            <button onclick="agregarAlCarrito('COMBO 3', 620)">Agregar al carrito</button>
-                            <!--<a href="">Mas Info</a> -->
-                        </div>
-                    </article>
-
-                    <article class="destacados__card-product">
-                        <div>
-                            <small>DESTACADOS</small>
-                            <img src="../assets/images/growmixpro.jpg" alt="" />
-
-                            <p>SUSTRATO GROWMIX</p>
-                            <p>El mejor sustrato para tus plantas tanto vegetación como floración</p>
-                            <h3>COMBO 4</h3>
-                            <p>combo destacado para tus cultivos</p>
-                            <button onclick="agregarAlCarrito('COMBO 4', 920)">Agregar al carrito</button>
-                             <!--a href="">mas info</a--> 
-                        </div>
-                    </article>
-
                 </section>
+
                 <div id="carrito">
                     <h2>Carrito</h2>
                     <div id="carrito-lista">
@@ -175,6 +177,7 @@
                     <button id="vaciar-carrito">Vaciar Carrito</button>
                     <button id="finalizar-compra">Finalizar Compra</button>
                 </div>
+
                 <div id="modal-carrito" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
@@ -184,10 +187,11 @@
                         </div>
                         <p>Total: $<span id="modal-total">0.00</span></p>
                         <button id="btn-pagar">pagar</button>
-                        
                     </div>
                 </div>
+
             </main>
+
             <footer>
 
                 <div class="envios">

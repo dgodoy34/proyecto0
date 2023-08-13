@@ -2,16 +2,16 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRODUCTOS</title>
-    <link rel="stylesheet" href="../css/main.css"/>
-    <link rel="stylesheet" href="../style/bootstrap.min.css" />
-    <link rel="stylesheet" href="../style/style.css"/>
-    <script src="../js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon"/>
-    <style type="text/css"></style>
-        
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PRODUCTOS</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../style/bootstrap.min.css" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <script src="../js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="../assets/images/mario-ico.ico" type="image/x-icon" />
+  <style type="text/css"></style>
+
 </head>
 
 <body>
@@ -58,16 +58,19 @@
               <a class="nav-link" href="./contacto.html">CONTACTO</a>
             </li>
             <li class="nav-item">
-                  <a class="nav-link" href="./login.html">login</a></li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./Registro.html">Registrarse</a></li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./login.html"><img src="../assets/images/carrit-png.png" alt="" width="30px" height="30px"></a>
-              </li>
-            </ul>
-          </div>
+              <a class="nav-link" href="./login.html">login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Registro.html">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./login.html"><img src="../assets/images/carrit-png.png" alt="" width="30px"
+                  height="30px"></a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -117,7 +120,7 @@
     </select>
 
     <p>Todo lo que necesitas para tus plantas</p>
-   
+
     <div class="destacados__card-title">DESTACADOS DEL MES</div>
     <section class="destacados">
       <article class="destacados__card-product">
@@ -170,7 +173,11 @@
         <p>combo destacado para tus cultivos</p>
         <!--button onclick="agregarAlCarrito('Producto 2', 20)">Agregar al carrito</button-->
         <div>
-          <a><button onclick="mostrarDetallesProducto('Producto 2', '20')">Ver Detalles</button>
+          <a> <button class="agregar-carrito"
+            onclick="mostrarDetallesProducto('COMBO 3', 1600)"
+            data-nombre="COMBO 4"
+            data-precio="420">Agregar al carrito</button>
+
           </a>
         </div>
 
@@ -182,10 +189,13 @@
         <h3>COMBO VEGETACION</h3>
         <p>combo destacado para tus cultivos</p>
         <div>
-        <a><button onclick="mostrarDetallesProducto('Producto 1', 30)">Ver Detalles</button>
-        </a>
-      </div>
-
+          <a>
+            <button class="agregar-carrito"
+              onclick="mostrarDetallesProducto('COMBO 4', 420)"
+              data-nombre="COMBO 4"
+              data-precio="420">Agregar al carrito</button>
+          </a>
+        </div>
       </article>
       <article>
         <div><small>OFERTAS</small>
@@ -243,7 +253,7 @@
       </article>
     </section>
 
-   </main>
+  </main>
   <footer>
 
     <div class="envios">
